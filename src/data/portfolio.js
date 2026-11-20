@@ -1,0 +1,303 @@
+// ─── Central Portfolio Data ───────────────────────────────────────────────────
+// Edit this file to update every text, link, and project detail site-wide.
+
+export const PERSONAL = {
+  name: 'Ayomide Daniyan',
+  nameShort: 'AD',
+  location: 'Lagos, Nigeria',
+  coords: '6.5244° N, 3.3792° E',
+  timezone: 'Africa/Lagos',
+  email: 'samueldaniyan564@gmail.com',
+  github: 'https://github.com/sammy-dev-001',
+  linkedin: 'https://www.linkedin.com/in/ayomide-daniyan-6a4233447',
+  twitter: null, // Add when available: 'https://twitter.com/handle'
+  available: true,
+  status: 'Available for freelance & engineering roles',
+  quote: 'Consistency is the path, greatness is my destination.',
+
+  headline: ['Engineering', 'high-craft', 'web products', '& interactive', 'systems.'],
+  // ^ Index 1 ("high-craft") renders in Instrument Serif italic
+
+  bio: 'Computer Science undergraduate at Lagos State University shipping production-grade web apps, full-stack prototypes, and interactive interfaces. I architect for speed, build for real users, and sweat every detail that separates good from great.',
+
+  bio2: 'From cross-platform mobile to real-time multiplayer to AI-powered tooling — the through-line is craft, shipping discipline, and genuine product thinking.',
+};
+
+export const CREDENTIALS = [
+  {
+    id: 'hackathon',
+    type: 'award',
+    iconName: 'Award',
+    title: '1st Runner-Up',
+    org: 'LASU Campus Hackathon',
+    year: '2025',
+    note: 'Competed against multi-disciplinary teams. Built and pitched a working product under 24-hour constraints.',
+  },
+  {
+    id: 'education',
+    type: 'education',
+    iconName: 'GraduationCap',
+    title: 'B.Sc. Computer Science',
+    org: 'Lagos State University (FOCIT)',
+    year: '2025 — Present',
+    note: 'Faculty of Communication & Information Technology. Focus: software engineering, algorithms, systems design.',
+  },
+  {
+    id: 'gdg',
+    type: 'community',
+    iconName: 'Globe',
+    title: 'Active Member & Technical Contributor',
+    org: 'Google Developer Groups — LASU',
+    year: '2025 — Present',
+    note: 'Contributes to community events, workshops, and technical sessions under the Google Developer ecosystem.',
+  },
+  {
+    id: 'tdd',
+    type: 'community',
+    iconName: 'Mic',
+    title: '3rd Cohort — Inducted Member',
+    org: 'The Dialogue Den (TDD)',
+    year: '2026',
+    note: 'Public speaking, structured communication, and leadership. The ability to articulate complex ideas clearly is an engineering advantage — not a soft skill.',
+  },
+];
+
+export const PROJECTS = [
+  {
+    id: 'edufi',
+    index: '01',
+    year: '2024',
+    category: 'FULL-STACK PRODUCT',
+    title: 'EduFi',
+    subtitle: 'CampusOS — The Student Super-App',
+    summary:
+      'A cross-platform student super-app that centralises academic management, personal finance, and campus life into a single, cohesive product. 20+ screens. AI-powered. Built for real students at LASU.',
+    problem:
+      'Nigerian university students juggle fragmented tools for class schedules, exam tracking, peer networking, and personal finance — usually across WhatsApp groups, notebooks, and Excel sheets. EduFi collapses this chaos into one intelligent, mobile-first platform.',
+    decisions: [
+      'Chose React Native + Expo for true cross-platform reach (iOS, Android, Web) from a single TypeScript codebase, with EAS for OTA updates and native builds.',
+      'Integrated Google Gemini AI as both an academic assistant (email drafting, concept explanation) and a finance advisor — using context-aware prompting to stay campus-relevant.',
+      'FullCalendar for the academic timetable: enterprise-grade scheduling with zero rebuild cost and deep event customisation.',
+      'Socket.io for real-time peer forums and study group chat — event-driven messaging without long-polling overhead.',
+      'PostgreSQL + Prisma as the backend data layer, with Firebase for auth and push notification delivery.',
+    ],
+    stack: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Socket.io', 'Google Gemini AI', 'FullCalendar', 'PostgreSQL', 'Firebase'],
+    github: 'https://github.com/sammy-dev-001/campusOS',
+    live: null,
+    liveLabel: 'iOS & Android via EAS',
+    mobileOnly: true,
+    color: '#FF4D00',
+    features: [
+      'AI Academic Assistant (Gemini)',
+      'Personal Finance Tracker + AI Advisor',
+      'GPA Tracker & Grade Analytics',
+      'Interactive Campus Navigation Map',
+      'Peer Forums & Study Buddy Matching',
+      'Timetable with Smart Reminders',
+      'Resource Sharing Hub',
+      'Student Marketplace',
+      'Tutor Finder & Roommate Matching',
+    ],
+  },
+  {
+    id: 'playrave',
+    index: '02',
+    year: '2024',
+    category: 'MULTIPLAYER PLATFORM',
+    title: 'PlayRave',
+    subtitle: 'Real-time Party Gaming Platform',
+    summary:
+      'A high-energy multiplayer party gaming platform with 16 fully-engineered game engines, real-time Socket.io lobbies, Agora video/audio RTC, and a custom Neon Rave design system. Shipped to Vercel with OTA updates.',
+    problem:
+      'Party games are either offline (someone brings a deck of cards) or generic browser games with no social layer. PlayRave bridges local and online play with a first-class mobile UI and real-time infrastructure that works across devices.',
+    decisions: [
+      'Built 16 fully independent game engines on the backend (Whot, Scrabble, Truth or Dare, Charades, Memory Chain, etc.) each exposing a consistent _publicState API so frontend consumes game state without engine-specific logic.',
+      'Agora RTC SDK for video/audio calls during online games — enabling face-to-face charades and reaction gameplay over WebRTC without building signalling infrastructure.',
+      'Custom sound and haptics services abstracted from game logic — any game triggers platform-level audio/haptic feedback in one line.',
+      'EAS OTA updates for zero-downtime feature shipping: users get new game engines and bug fixes without a store release.',
+      'MongoDB for flexible game-state documents that vary significantly in schema per game type.',
+    ],
+    stack: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Socket.io', 'MongoDB', 'Agora RTC', 'Express', 'Lottie'],
+    github: 'https://github.com/sammy-dev-001/PlayRave',
+    live: 'https://play-rave.vercel.app',
+    liveLabel: 'Live Demo',
+    color: '#FF4D00',
+    features: [
+      '16 Fully-Engineered Game Engines',
+      'Real-time Socket.io Lobbies',
+      'Agora Video/Audio RTC',
+      'OTA Updates via EAS',
+      'Custom Neon Rave Design System',
+      'Local & Online Multiplayer',
+      'Cross-platform (iOS, Android, Web)',
+    ],
+  },
+  {
+    id: 'rawshare',
+    index: '03',
+    year: '2024',
+    category: 'FULL-STACK WEB APP',
+    title: 'RawShare',
+    subtitle: 'Zero-Friction Photo Gallery Sharing',
+    summary:
+      'A production-grade media sharing platform: drag-and-drop uploads to Cloudflare R2, instant shareable links, full-screen lightbox with keyboard navigation, bulk ZIP download, and 5-day auto-expiry. Built with Next.js 16 App Router.',
+    problem:
+      "Sharing a batch of photos should take 10 seconds — not involve creating an account, compressing images, or managing cloud storage. RawShare makes it instant, beautiful, and automatic. Links self-destruct in 5 days. No cleanup needed.",
+    decisions: [
+      'Cloudflare R2 for file storage — global CDN edge delivery with zero egress fees, unlike AWS S3. Presigned upload URLs keep files off the Node.js process.',
+      'Supabase (PostgreSQL) + Prisma for a type-safe ORM layer with connection pooling — scales without manual database management.',
+      'Upstash Redis for rate-limiting API routes — prevents abuse without spinning up a dedicated rate-limit service.',
+      '5-day auto-expiry via a Vercel cron job (`0 2 * * *`) — keeps storage costs near-zero and links deliberately ephemeral by design.',
+      'Clerk for auth — authentication shipped in an afternoon, with session management, JWT, and middleware integration built in.',
+    ],
+    stack: ['Next.js 16', 'TypeScript', 'Prisma', 'Supabase', 'Cloudflare R2', 'Framer Motion', 'Clerk Auth', 'Upstash Redis', 'Tailwind CSS v4'],
+    github: 'https://github.com/sammy-dev-001/rawshare',
+    live: 'https://rawshare-two.vercel.app/',
+    liveLabel: 'Live Demo',
+    color: '#FF4D00',
+    features: [
+      'Drag-and-drop Uploads (Multi-file)',
+      'Instant Shareable Links',
+      'Full-screen Lightbox Viewer',
+      'Keyboard Navigation (← →)',
+      'Bulk ZIP Download',
+      '5-day Auto-expiry',
+      'Cloudflare R2 Storage',
+      'Upstash Redis Rate Limiting',
+    ],
+  },
+  {
+    id: 'teambot',
+    index: '04',
+    year: '2024',
+    category: 'AI TOOLING',
+    title: 'TeamBot',
+    subtitle: 'AI WhatsApp Teammate for Dev Teams',
+    summary:
+      'An AI-powered WhatsApp teammate for hackathon squads and dev teams. Lives in your group chat: tracks tasks, sets reminders, analyzes flyers and UI mockups via vision, parses voice notes, and generates 8:00 AM standup briefs autonomously.',
+    problem:
+      "Hackathon teams lose context across WhatsApp threads — tasks aren't tracked, deadlines slip, and nobody knows who owns what. TeamBot brings a senior engineer into the group chat. It reads, remembers, and acts.",
+    decisions: [
+      'Dual-path routing: deterministic slash commands (/tasks, /deadlines, /status, /notes) return in <30ms with zero AI cost. Only ambiguous natural-language messages hit the Gemini tool loop.',
+      'Gemini multimodal: analyzes UI mockups, extracts deadlines from event flyer images, parses WhatsApp voice notes — all natively without an extra transcription service.',
+      'SQLite WAL (Write-Ahead Logging) for concurrent read/write without row-level locking — fast local persistence with zero infrastructure cost.',
+      'Autonomous tool loop: Gemini reads team member skills from the database and assigns tasks to the best-suited person automatically, with rationale.',
+    ],
+    stack: ['Node.js', 'Google Gemini API', 'WhatsApp Baileys', 'SQLite WAL', 'Multimodal AI', 'SquareCloud'],
+    github: 'https://github.com/sammy-dev-001/team-bot',
+    live: null,
+    liveLabel: null,
+    color: '#FF4D00',
+    features: [
+      'Dual-path Routing (<30ms slash commands)',
+      'Gemini Multimodal AI',
+      'Autonomous Task Assignment',
+      'Voice Note Parsing',
+      'UI Mockup & Flyer Analysis',
+      'Daily 8:00 AM Standup Briefs',
+      'SQLite WAL Persistence',
+    ],
+  },
+  {
+    id: 'kinetic-strings',
+    index: '05',
+    year: '2024',
+    category: 'CREATIVE ENGINEERING',
+    title: 'Kinetic Strings & Drums',
+    subtitle: 'Browser Music Synthesis · Live Staff Notation',
+    summary:
+      'A 893-line, zero-dependency interactive music instrument built entirely on the Canvas API and Web Audio API. Pluck 6 physics-spring guitar strings, trigger drums, launch bouncing orbs, and watch notes appear on a live musical staff in real time.',
+    problem:
+      'Browser-based music apps almost always reach for a library. This was a constraint-driven exercise: build a genuinely musical, visually rich instrument using only what the browser ships natively — no npm, no samples, no frameworks.',
+    decisions: [
+      'Physics-spring string model: each string carries amp and vel state updated on every rAF tick. Pluck a string and it oscillates with exponential decay — the visual feel matches the audio.',
+      'Web Audio API OscillatorNode + GainNode chain: plucked strings use a triangle wave with a fast attack and tuned decay envelope to approximate acoustic resonance without samples.',
+      'Canvas 2D 60fps loop: draws luminous string ripples with quadratic bezier curves, bouncing orbs with elastic collision detection, and a rendered treble clef staff with note heads placed at the correct staff step.',
+      'Zero external files: no audio samples, no SVG imports, no npm packages — ships as a single 893-line HTML file. Constraint as craft.',
+    ],
+    stack: ['Vanilla JS', 'Canvas API', 'Web Audio API', 'Physics Simulation', 'Zero Dependencies'],
+    github: 'https://github.com/sammy-dev-001/PlayRave',
+    live: null,
+    liveLabel: 'Interactive Demo',
+    embedded: true,
+    color: '#FF4D00',
+    features: [
+      '6-string Guitar (Standard Tuning E2–E4)',
+      'Physics-spring String Plucking',
+      'Drum Kit (Kick, Snare, Hi-Hat)',
+      'Auto-launching Bouncing Orbs',
+      'Live Musical Staff Notation',
+      'Score Playback',
+      'Zero Dependencies',
+    ],
+  },
+];
+
+export const STACK = {
+  'Core Engineering': [
+    'Frontend Architecture',
+    'Responsive Design Systems',
+    'Full-Stack MVP Shipping',
+    'Real-time Applications',
+    'Mobile-first Development',
+    'API Design & Integration',
+    'Cross-platform Products',
+    'Interactive Web Interfaces',
+  ],
+  Interfaces: [
+    'React',
+    'Next.js',
+    'React Native',
+    'Expo',
+    'TypeScript',
+    'JavaScript',
+    'HTML5 / CSS3',
+    'Tailwind CSS',
+    'Framer Motion',
+  ],
+  'Backend & Data': [
+    'Node.js',
+    'Express',
+    'Firebase',
+    'PostgreSQL',
+    'MongoDB',
+    'Prisma',
+    'SQLite',
+    'Socket.io',
+    'REST APIs',
+    'Supabase',
+  ],
+  'Motion & Polish': [
+    'Framer Motion',
+    'GSAP + ScrollTrigger',
+    'Canvas API',
+    'Web Audio API',
+    'Lottie',
+    'RN Reanimated',
+    'CSS Animations',
+  ],
+  Workflow: [
+    'Git / GitHub',
+    'Vite',
+    'Vercel',
+    'EAS (Expo)',
+    'Figma',
+    'VS Code',
+    'Postman',
+  ],
+};
+
+export const CONTACT_SCOPES = [
+  'Landing Page',
+  'Full-Stack MVP',
+  'Frontend Overhaul',
+  'Mobile App',
+  'Custom',
+];
+
+export const NAV_LINKS = [
+  { id: 'work', label: 'Work', href: '#work' },
+  { id: 'about', label: 'About', href: '#about' },
+  { id: 'proof', label: 'Proof', href: '#proof' },
+  { id: 'contact', label: 'Contact', href: '#contact' },
+];

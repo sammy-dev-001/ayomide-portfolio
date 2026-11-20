@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Production build
+dist
+dist-ssr
+
+# Environment & Vercel
+.env
+.env.local
+.env.*.local
+.vercel
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+*.local
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*

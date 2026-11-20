@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ayomide Daniyan — Software Engineer &amp; Builder</title>
+    <meta name="description" content="Ayomide Daniyan is a software engineer &amp; builder based in Lagos, Nigeria. Building high-craft web applications, real-time multiplayer systems, and full-stack software." />
+    <meta name="keywords" content="Ayomide Daniyan, Software Engineer, Frontend Engineer, Product Engineer, React Developer, Next.js, Lagos Nigeria, Full-Stack Developer" />
+    <meta name="author" content="Ayomide Daniyan" />
+
+    <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayomidedaniyan-dev.vercel.app" />
+    <meta property="og:title" content="Ayomide Daniyan — Software Engineer &amp; Builder" />
+    <meta property="og:description" content="Building high-craft web products &amp; interactive systems from Lagos, Nigeria." />
+    <meta property="og:image" content="https://ayomidedaniyan-dev.vercel.app/images/og-preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ayomide Daniyan — Software Engineer &amp; Builder" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ayomidedaniyan-dev.vercel.app" />
+    <meta name="twitter:title" content="Ayomide Daniyan — Software Engineer &amp; Builder" />
+    <meta name="twitter:description" content="Building high-craft web products &amp; interactive systems from Lagos, Nigeria." />
+    <meta name="twitter:image" content="https://ayomidedaniyan-dev.vercel.app/images/og-preview.png" />
+
+    <link rel="canonical" href="https://ayomidedaniyan-dev.vercel.app" />
+
+    <!-- Custom Minimal SVG Monogram Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/favicon.svg" />
+
+    <!-- Zero-Flash Synchronous Theme Detector -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme_preference');
+          var overrideDate = localStorage.getItem('theme_override_date');
+          var today = new Date().toDateString();
+          var theme = 'dark';
+
+          if (saved && (saved === 'light' || saved === 'dark') && overrideDate === today) {
+            theme = saved;
+          } else {
+            var hour = new Date().getHours();
+            theme = (hour >= 6 && hour < 18) ? 'light' : 'dark';
+          }
+
+          var root = document.documentElement;
+          if (theme === 'light') {
+            root.classList.remove('dark');
+            root.classList.add('light');
+            root.setAttribute('data-theme', 'light');
+          } else {
+            root.classList.remove('light');
+            root.classList.add('dark');
+            root.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-canvas text-ink antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
